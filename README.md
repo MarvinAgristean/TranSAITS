@@ -8,13 +8,19 @@ To ensure the validation of this approach, we made sure that there is no data le
 We evaluate the models performances, by using the metrics mean absolute error (MAE), root mean squared error (RMSE) and mean relative error (MRE), but we lay the
 most focus on MAE.
 The training convergence of validation MAE is seen in the following figures:
+Training convergence on all ICU data:
 
-![Training convergence on all ICU data.](/data-imputation-icu\Figures\fig_all_icu.pdf)
-![Training convergence on cardiovascular data.](data-imputation-icu\Figures\fig_heart_no_trans.pdf)
-![Training convergence of transfer learning.](data-imputation-icu\Figures\fig_heart_trans_both.pdf)
+![Training convergence on all ICU data.](Figures/fig_all_icu.png)
+Training convergence on cardiovascular data:
 
-The models performances on the test set can be seen in the following table:
-![Evaluation on the test set.]()
+![Training convergence on cardiovascular data.](Figures/fig_heart_no_trans.png)
+Training convergence of transfer learning:
+
+![Training convergence of transfer learning.](Figures/fig_heart_trans_both.png)
+
+The models performances on the test set can be seen in the following table, as mean $\pm$ standard deviation of the metrics in the order MAE/MRE/RMSE for ten trained models each:
+
+![Evaluation on the test set.](Figures/table_results.png)
 
 This experiment showed, that the transfer learning based implementations are superior to their normal trained implementation on the cardiovascular ICU dataset in terms of lowest MAE on the test set, without an noteworthy increase in training time in comparison to the training on all ICU data.
 The [previously](https://www.sciencedirect.com/science/article/abs/pii/S0957417423001203?via%3Dihub) established order of performance of these model architectures is also recreated, as SAITS is superior to BRITS, which itself is superior to M-RNN.
